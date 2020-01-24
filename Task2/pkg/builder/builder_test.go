@@ -11,7 +11,7 @@ var (
 		"Wheels:true. Carcase:true. Engine:true. Accelerator:false. Gun:true.",
 		"Wheels:true. Carcase:true. Engine:true. Accelerator:false. Gun:false.",
 	}
-	descriptionsCars = []string{}
+	descriptionsCars []string
 )
 
 const (
