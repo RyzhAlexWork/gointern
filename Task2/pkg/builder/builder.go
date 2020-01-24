@@ -16,7 +16,6 @@ func (b *builder) ConstructCar() {
 	b.car.AddWheels()
 	b.car.AddCarcase()
 	b.car.AddEngine()
-	b.car.MakeDescription()
 }
 
 // Construct sport-car.
@@ -25,7 +24,6 @@ func (b *builder) ConstructSportcar() {
 	b.car.AddCarcase()
 	b.car.AddEngine()
 	b.car.AddAccelerator()
-	b.car.MakeDescription()
 }
 
 // Construct tank.
@@ -34,7 +32,6 @@ func (b *builder) ConstructTank() {
 	b.car.AddCarcase()
 	b.car.AddEngine()
 	b.car.AddGun()
-	b.car.MakeDescription()
 }
 
 // NewBuild create builder implementation for interface Builder

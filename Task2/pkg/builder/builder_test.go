@@ -22,15 +22,15 @@ func Test_Builder(t *testing.T) {
 	newCar := NewCar()
 	build := NewBuild(newCar)
 	build.ConstructSportcar()
-	descriptionsCars = append(descriptionsCars, newCar.ShowDescription())
+	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
 	newCar = NewCar()
 	build = NewBuild(newCar)
 	build.ConstructTank()
-	descriptionsCars = append(descriptionsCars, newCar.ShowDescription())
+	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
 	newCar = NewCar()
 	build = NewBuild(newCar)
 	build.ConstructCar()
-	descriptionsCars = append(descriptionsCars, newCar.ShowDescription())
+	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
 
 	t.Run(builderTest, func(t *testing.T) {
 		for i, expect := range expects {

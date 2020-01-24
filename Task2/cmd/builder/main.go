@@ -10,6 +10,6 @@ func main() {
 	build := builder.NewBuild(newCar)
 
 	build.ConstructSportcar()
-	descriptionCar := newCar.ShowDescription()
+	descriptionCar := newCar.GetDescription()
 	fmt.Printf("%s\n", descriptionCar)
 }

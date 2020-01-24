@@ -9,8 +9,7 @@ type Car interface {
 	AddEngine()
 	AddAccelerator()
 	AddGun()
-	MakeDescription()
-	ShowDescription() string
+	GetDescription() string
 }
 
 type car struct {
@@ -19,7 +18,6 @@ type car struct {
 	engine      bool
 	accelerator bool
 	gun         bool
-	description string
 }
 
 // AddGun builds a wheels.
@@ -47,16 +45,11 @@ func (c *car) AddGun() {
 	c.gun = true
 }
 
-// MakeDescription create description car.
-func (c *car) MakeDescription() {
-	c.description = "Wheels:" + strconv.FormatBool(c.wheels) + ". Carcase:" + strconv.FormatBool(c.carcase) +
+// GetDescription get description car.
+func (c *car) GetDescription() string {
+	return "Wheels:" + strconv.FormatBool(c.wheels) + ". Carcase:" + strconv.FormatBool(c.carcase) +
 		". Engine:" + strconv.FormatBool(c.engine) + ". Accelerator:" + strconv.FormatBool(c.accelerator) +
 		". Gun:" + strconv.FormatBool(c.gun) + "."
-}
-
-// ShowDescription show description car.
-func (c *car) ShowDescription() string {
-	return c.description
 }
 
 // NewCar create car implementation for interface Car
