@@ -53,12 +53,12 @@ func NewUser(login string, inputWallet wallet, inputWalletStatus walletStatus) U
 		login:        login,
 		wallet:       inputWallet,
 		walletStatus: inputWalletStatus,
-		addStatus:    map[bool]models.Status{
-			true: models.AddSuccess,
+		addStatus: map[bool]models.Status{
+			true:  models.AddSuccess,
 			false: models.AddFail,
 		},
-		payStatus:    map[bool]models.Status{
-			true: models.PaySuccess,
+		payStatus: map[bool]models.Status{
+			true:  models.PaySuccess,
 			false: models.PayFail,
 		},
 	}
