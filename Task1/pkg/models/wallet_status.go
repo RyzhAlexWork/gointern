@@ -1,7 +1,7 @@
 package models
 
 // Status ...
-type Status string
+type Status = string
 
 // Status states
 const (
