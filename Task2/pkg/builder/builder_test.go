@@ -14,6 +14,10 @@ var (
 	descriptionsCars = []string{}
 )
 
+const (
+	builderTest = "builderTest"
+)
+
 func Test_Builder(t *testing.T) {
 	newCar := NewCar()
 	build := NewBuild(newCar)
@@ -28,7 +32,7 @@ func Test_Builder(t *testing.T) {
 	build.ConstructCar()
 	descriptionsCars = append(descriptionsCars, newCar.ShowDescription())
 
-	t.Run("builderTest", func(t *testing.T) {
+	t.Run(builderTest, func(t *testing.T) {
 		for i, expect := range expects {
 			assert.Equal(t, expect, descriptionsCars[i])
 		}
