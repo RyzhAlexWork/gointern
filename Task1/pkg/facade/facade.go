@@ -49,17 +49,17 @@ func (u *user) Balance() int {
 
 // NewUser create user implementation for interface User
 func NewUser(login string, inputWallet wallet, inputWalletStatus walletStatus) User {
-	addStatus := make(map[bool]models.Status)
-	addStatus[true] = models.AddSuccess
-	addStatus[false] = models.AddFail
-	payStatus := make(map[bool]models.Status)
-	payStatus[true] = models.PaySuccess
-	payStatus[false] = models.PayFail
 	return &user{
 		login:        login,
 		wallet:       inputWallet,
 		walletStatus: inputWalletStatus,
-		addStatus:    addStatus,
-		payStatus:    payStatus,
+		addStatus:    map[bool]models.Status{
+			true: models.AddSuccess,
+			false: models.AddFail,
+		},
+		payStatus:    map[bool]models.Status{
+			true: models.PaySuccess,
+			false: models.PayFail,
+		},
 	}
 }
