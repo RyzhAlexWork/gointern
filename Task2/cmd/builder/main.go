@@ -7,9 +7,9 @@ import (
 
 func main() {
 	newCar := builder.NewCar()
-	build := builder.NewBuild(newCar)
+	carBuilder := builder.NewBuild(newCar)
 
-	build.ConstructSportcar()
+	carBuilder.ConstructSportcar()
 	descriptionCar := newCar.GetDescription()
 	fmt.Printf("%s\n", descriptionCar)
 }
