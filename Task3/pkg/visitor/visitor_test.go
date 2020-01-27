@@ -1,11 +1,11 @@
 package visitor
 
 import (
+	"testing"
+
 	"github.com/RyzhAlexWork/gointern/Task3/pkg/groups"
 	"github.com/RyzhAlexWork/gointern/Task3/pkg/reputation"
 	"github.com/stretchr/testify/assert"
-
-	"testing"
 )
 
 var (
