@@ -1,5 +1,14 @@
 package builder
 
+type car interface {
+	AddWheels()
+	AddCarcase()
+	AddEngine()
+	AddAccelerator()
+	AddGun()
+	GetDescription() string
+}
+
 // Builder ...
 type Builder interface {
 	ConstructCar()
@@ -8,7 +17,7 @@ type Builder interface {
 }
 
 type builder struct {
-	car Car
+	car car
 }
 
 // Construct car.
@@ -35,7 +44,7 @@ func (b *builder) ConstructTank() {
 }
 
 // NewBuild create builder implementation for interface Builder
-func NewBuild(inputCar Car) Builder {
+func NewBuild(inputCar car) Builder {
 	return &builder{
 		car: inputCar,
 	}

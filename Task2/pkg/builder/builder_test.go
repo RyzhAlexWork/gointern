@@ -3,6 +3,7 @@ package builder
 import (
 	"testing"
 
+	carPackage "github.com/RyzhAlexWork/gointern/Task2/pkg/car"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -20,15 +21,15 @@ const (
 )
 
 func Test_Builder(t *testing.T) {
-	newCar := NewCar()
+	newCar := carPackage.NewCar()
 	build := NewBuild(newCar)
 	build.ConstructSportcar()
 	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
-	newCar = NewCar()
+	newCar = carPackage.NewCar()
 	build = NewBuild(newCar)
 	build.ConstructTank()
 	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
-	newCar = NewCar()
+	newCar = carPackage.NewCar()
 	build = NewBuild(newCar)
 	build.ConstructCar()
 	descriptionsCars = append(descriptionsCars, newCar.GetDescription())
